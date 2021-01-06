@@ -2,7 +2,7 @@
 
 ### Setup
 
-`yarn` or `npm` to install dependencies
+`yarn` or `npm i` to install dependencies
 
 ### Use
 
