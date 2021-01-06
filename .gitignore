@@ -1,1 +1,5 @@
 node_modules
+input.csv
+output.csv
+matrix.csv
+attributes.csv

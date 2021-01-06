@@ -3,8 +3,9 @@ const parseInput = require('./parseInput')
 const generateMatrix = require('./generateMatrix')
 
 const input = parseInput()
-const output = generateMatrix(input)
+const { matrix, attributesCsv } = generateMatrix(input)
 
-fs.writeFileSync('output.csv', output)
+fs.writeFileSync('matrix.csv', matrix)
+fs.writeFileSync('attributes.csv', attributesCsv)
 
-console.log('output saved to output.csv')
+console.log('output saved to matrix.csv and attributes.csv')

@@ -30,7 +30,7 @@ module.exports = (input) => {
         return { one: a.name, two: b.name, average }
     })
 
-    let output = ' ,' + people.join() + '\n'
+    let matrix = ' ,' + people.join() + '\n'
 
     people.map((person, lIndex) => {
         const data = people.map((topPerson, tIndex) => {
@@ -42,8 +42,23 @@ module.exports = (input) => {
             return relationship.average
         }).join()
 
-        output = output + person + ',' + data + '\n'
+        matrix = matrix + person + ',' + data + '\n'
     })
 
-    return output
+    const attributes = people.map(person => {
+        const aggregate = people.reduce((acc, otherPerson) => {
+            if (person === otherPerson) return acc
+            const relationship = result.find(({ one, two }) =>
+                (one === person && two === otherPerson) ||
+                (one === otherPerson && two === person)
+            )
+            return acc + relationship.average
+        }, 0)
+
+        return { name: person, aggregate }
+    })
+
+    const attributesCsv = attributes.map(({ name, aggregate }) => name + ', ' + aggregate).join('\n')
+
+    return { matrix, attributesCsv }
 }

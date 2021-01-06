@@ -8,4 +8,4 @@
 
 save input file as `input.csv` in this directory
 
-`node run.js` generates a file named `output.csv`
+`node run.js` generates a file named `matrix.csv`
