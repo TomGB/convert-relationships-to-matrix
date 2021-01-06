@@ -4,7 +4,7 @@
 
 `yarn` or `npm i` to install dependencies
 
-### input
+### Input
 
 Save the form output as `input.csv` in this directory
 
