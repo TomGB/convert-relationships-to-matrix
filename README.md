@@ -18,7 +18,7 @@ Once the `input.csv` is in place then run
 
 `node run.js` in the cli
 
-This generates a file named `matrix.csv` and `attributes.csv`
+This generates two file named `matrix.csv` and `attributes.csv`
 
 `matrix.csv` contains the averaged weights between each pair of individules
 
