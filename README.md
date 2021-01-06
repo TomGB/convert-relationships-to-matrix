@@ -6,14 +6,20 @@
 
 ### input
 
-save input file as `input.csv` in this directory
+Save the form output as `input.csv` in this directory
 
-Format must be a CSV
+The header must contain people's names contained within square brackets e.g. `[Tom Banister]`
 
-header must contain people's names contained within square brackets e.g. `[Tom Banister]`
-
-rows must contain a phrase matching the weightingMap (found in `parseInput.js`) or the text `This is me`
+Rows must contain a phrase matching the weightingMap (found in `parseInput.js`) or the text `This is me`
 
 ### Use
 
-`node run.js` generates a file named `matrix.csv` and `attributes.csv`
+Once the `input.csv` is in place then run
+
+`node run.js` in the cli
+
+This generates a file named `matrix.csv` and `attributes.csv`
+
+`matrix.csv` contains the averaged weights between each pair of individules
+
+`attributes.csv` contains the sum of the relationships for that person
